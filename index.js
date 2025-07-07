@@ -43,6 +43,7 @@ app.post('/send-auth-email', async (req, res) => {
   }
 });
 
-app.listen(3500, '0.0.0.0', () => {
-  console.log('✅ Node.js backend running on http://192.168.1.200:3500');
+app.listen(process.env.PORT || 3500, () => {
+  console.log(`✅ Node.js backend running on port ${process.env.PORT || 3500}`);
 });
+
