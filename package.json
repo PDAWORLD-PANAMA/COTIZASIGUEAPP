@@ -1,0 +1,19 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "Authorization email sender for Android",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "resend": "^4.6.0"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {}
+}
