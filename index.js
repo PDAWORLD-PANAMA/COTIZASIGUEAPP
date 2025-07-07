@@ -15,10 +15,12 @@ console.log("Loaded API Key:", process.env.RESEND_API_KEY);
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.get('/', (req, res) => {
+  console.log("✅ GET / called");
   res.send('Server is running');
 });
 
 app.post('/send-auth-email', async (req, res) => {
+   console.log("✅ POST /send-auth-email called with data:", req.body); 
   const { uuid, code, cedula, nombre, phone, email } = req.body;
 
   try {
