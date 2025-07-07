@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/send-auth-email', async (req, res) => {
-  const { uuid, code, cedula, nombre, phone } = req.body;
+  const { uuid, code, cedula, nombre, phone, email } = req.body;
 
   try {
     const result = await resend.emails.send({
@@ -31,6 +31,7 @@ app.post('/send-auth-email', async (req, res) => {
         <p><strong>Nombre:</strong> ${nombre}</p>
         <p><strong>Cédula:</strong> ${cedula}</p>
         <p><strong>Teléfono:</strong> ${phone}</p>
+        <p><strong>Email:</strong> ${email}</p>
         <p><strong>UUID:</strong> ${uuid}</p>
         <p><strong>Código:</strong> <code>${code}</code></p>
       `
