@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 
 app.post('/send-auth-email', async (req, res) => {
    console.log("✅ POST /send-auth-email called with data:", req.body); 
-  const { uuid, code, cedula, nombre, phone, email } = req.body;
+  const { uuid, code, cedula, nombre, phone, email, sistema } = req.body;
 
   try {
     const result = await resend.emails.send({
@@ -36,6 +36,7 @@ app.post('/send-auth-email', async (req, res) => {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>UUID:</strong> ${uuid}</p>
         <p><strong>Código:</strong> <code>${code}</code></p>
+        <p><strong>Sistema:</strong> <code>${sistema}</code></p>
       `
     });
 
